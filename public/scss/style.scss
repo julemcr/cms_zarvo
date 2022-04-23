@@ -1,0 +1,84 @@
+/*
+	Theme Name: Scavvios
+	Author: Anonymous
+	Author URI:
+	Version: 1
+	Description: Scavvios theme for Wordpress
+	License: GNU General Public License v2 or later
+	License URI: http://www.gnu.org/licenses/gpl-2.0.html
+	Text Domain: Scavvios
+	Tags: one-column, two-columns
+	Theme URI:
+*/
+
+/*------------------------------------------------------------------
+Icomoon / .icomoon
+Slick Slider / .slick-slider
+Page Wrapper / #pageWrapper
+Image Fit / .imgFit
+Background (size) Cover / .bgCover
+Svg Mask Background / .svgBg
+Pointer Events None / .inaccessible
+Font Weight Medium / .fwMedium
+Text Size Medium / .textSizeMedium
+button Theme / .btnTheme
+button Theme Outline / .btnThemeOutline
+button White / .btnWhite
+button Width Small / .btnMinSmall
+Header fixer / .headerFixer
+Page Main Header / #pageHeader
+Page Logo / .logo
+Page Main Navigation / .pgMainNavigation
+Page Burger Menu Opener / .pgNavOpener
+Page Navigation Collapse / .pageMainNavCollapse
+Heading Title / .headingTitle
+Intro Block Parallax Wrap / .ibUpperWrap
+Intro Block / .introBlock
+Intro Block Image / .ibImgHolder
+Intro Block Social Networks / .ibSocialNetworks
+About Block Features Wrap / .abFeaturesWrap
+About Block Features List / .abFeatureList
+About Block Features Column / .abflColumn
+About Block Features Tag / .abflcTag
+About Block Features Heading / .abflcHeading
+Story Column / .msColumn
+Progress Title / .prgTitle
+Progress Show Span / .prgShowSpan
+Progress Pie Chart List / .pieList
+Filter List / .filtersList
+mcwColumn / .mcwColumn
+mcwcCaption / .mcwcCaption
+stImgHolder / .stImgHolder
+experienceList / .experienceList
+elStoryColumn / .elStoryColumn
+escIcnWrap / .escIcnWrap
+clientQuote / .clientQuote
+sponsorsList / .sponsorsList
+dotsList / .dotsList
+nwbColumn / .nwbColumn
+pfbColumn / .pfbColumn
+labelAbsolute / .labelAbsolute
+textCopyright / .textCopyright
+footer nav list / .ftNav
+Button back to top / .btnTop
+*/
+
+@import "vendor/bootstrap/functions";
+@import "vendor/bootstrap/variables";
+
+@import "customVariables";
+@import "vendor/bootstrap/mixins";
+@import "base/customMixins";
+
+@import "vendor/icomoon";
+
+@import 'base/wp-reset';
+@import "vendor/slickSlider";
+
+@import "all";
+
+/*------------------------------------------------------------------
+Animations
+-------------------------------------------------------------------*/
+@import 'animations';
+@import 'vendor/animate';

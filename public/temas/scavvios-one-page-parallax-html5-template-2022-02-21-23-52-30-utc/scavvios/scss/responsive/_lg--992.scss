@@ -1,0 +1,107 @@
+@include media-breakpoint-up(lg){
+	h1, .h1{
+		font-size: (57/16) + rem;
+	}
+
+	h2, .h2{
+		font-size: (32/16) + rem;
+	}
+
+	h3, .h3{
+		font-size: (22/16) + rem;
+	}
+
+	.btnMinSmall{
+		min-width: 170px;
+	}
+
+	#pageHeader{
+		padding-top: 23px;
+		padding-bottom: 23px;
+	}
+
+	.pgMainNavigation{
+
+		.nav-item{
+			margin-left: 42px;
+		}
+	}
+
+	.headingTitle{
+		font-size: 22px;
+	}
+
+	.ibSocialNetworks{
+		margin-left: 462px;
+	}
+
+	.abFeatureList{
+
+		li{
+
+			&:nth-child(1){
+				margin-left: 60px;
+			}
+
+			&:nth-child(2){
+				margin-left: 80px;
+			}
+
+			&:nth-child(4){
+				margin-left: 70px;
+			}
+		}
+	}
+
+	.abflColumn{
+		@include size(137px);
+	}
+
+	.abflcTag{
+		font-size: 17px;
+		@include size(54px);
+	}
+
+	.abflcHeading{
+		font-size: 18px;
+	}
+
+	.filtersList{
+
+		> li{
+			margin-left: 20px;
+			margin-right: 0;
+		}
+	}
+
+	.sponsorsList{
+
+		> li{
+			margin-bottom: 60px;
+			width: auto;
+		}
+	}
+
+	.nwbColumn{
+		height: 290px;
+
+		&.heightLg{
+			height: 610px;
+		}
+	}
+
+	.nwbcHeading{
+		font-size: 20px;
+	}
+
+	.ftNav{
+
+		li{
+			margin-right: 42px;
+		}
+	}
+
+	.btnTop{
+		margin-left: 450px;
+	}
+}

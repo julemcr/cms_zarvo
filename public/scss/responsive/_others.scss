@@ -1,0 +1,9 @@
+@include media-breakpoint-down(md){
+	.pageMainNavCollapse{
+		height: auto !important;
+		overflow-y: auto !important;
+		overflow-x: hidden !important;
+		display: block !important;
+		transition: $transition-collapse !important;
+	}
+}

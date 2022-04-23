@@ -1,0 +1,156 @@
+@include media-breakpoint-up(md){
+	h1, .h1{
+		font-size: (42/16) + rem;
+	}
+
+	.logo{
+		max-width: 136px;
+	}
+
+	.pgMainNavigation{
+
+		.nav-item{
+			margin-left: 10px;
+
+			&.anchor-active{
+
+				.nav-link{
+					background-color: transparent;
+
+					&:after{
+						opacity: 1;
+						visibility: visible;
+						transform: scaleX(1);
+					}
+				}
+			}
+		}
+
+		.nav-link{
+			padding: 0 0 10px;
+			@include pseudo(after, null, null, 0, 0);
+
+			&:hover{
+
+				&:after{
+					opacity: 1;
+					visibility: visible;
+					transform: scaleX(1);
+				}
+			}
+
+			&:after{
+				transition: opacity, 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+				opacity: 0;
+				visibility: hidden;
+				transform: scaleX(0);
+				transform-origin: 0 0 0;
+				border-radius: 9px;
+				@include size(15px, 3px);
+			}
+		}
+
+		.navbar-expand-md &{
+
+			.nav-link{
+				padding-left: 0;
+				padding-right: 0;
+			}
+		}
+	}
+
+	.pageMainNavCollapse{
+		background-color: transparent;
+		position: static;
+		transition: none;
+		transform: none;
+
+		&.show,
+		&.collapsing{
+			transform: none;
+		}
+	}
+
+	.headingTitle{
+		padding-left: 91px;
+
+		&:before{
+			background-size: 50px 2px, 10px 2px, 7px 7px;
+			background-position: 0 50%, 57px 50%, 73px 50%;
+			width: 91px;
+		}
+	}
+
+	.ibImgHolder{
+		margin-left: -101px;
+		margin-right: 0;
+	}
+
+	.abFeaturesWrap{
+		max-width: none;
+	}
+
+	.filtersList{
+
+		> li{
+			margin-right: 20px;
+		}
+	}
+
+	.mcwcCaption{
+
+		.title{
+			font-size: 24px;
+		}
+
+		.subTitle{
+			font-size: 16px;
+		}
+	}
+
+	.stImgHolder{
+		max-width: 468px;
+	}
+
+	.sponsorsList{
+
+		> li{
+			margin-bottom: 30px;
+			width: 50%;
+		}
+	}
+
+	.nwbColumn{
+		height: 240px;
+
+		&.heightLg{
+			height: 510px;
+		}
+	}
+
+	.ftNav{
+
+		li{
+			margin-right: 22px;
+			margin-left: 0;
+		}
+	}
+
+	.introBlock,
+	.ibSlider{
+		position: fixed;
+		left: 0;
+		top: 0;
+	}
+
+	.ibSlider .slick-track{
+		width: 100% !important;
+	}
+
+	.ibUpperWrap{
+		margin-top: 100vh;
+		position: relative;
+		z-index: 2;
+		background-color: $body-bg;
+	}
+}

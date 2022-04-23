@@ -1,0 +1,38 @@
+@include media-breakpoint-up(sm){
+	.ibImgHolder{
+		z-index: 1;
+		max-width: 100%;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		margin-left: 9px;
+		margin-right: -50px;
+	}
+
+	.abFeatureList{
+
+		li{
+			margin-bottom: 0;
+			width: auto;
+
+			&:nth-child(1){
+				margin-left: 30px;
+			}
+
+			&:nth-child(2){
+				margin-left: 60px;
+			}
+
+			&:nth-child(4){
+				margin-left: 40px;
+			}
+		}
+	}
+
+	.sponsorsList{
+
+		> li{
+			width: 25%;
+		}
+	}
+}

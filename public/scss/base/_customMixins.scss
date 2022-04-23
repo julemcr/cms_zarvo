@@ -1,0 +1,44 @@
+@mixin pseudo($pseudo, $top: null, $right: null, $bottom: null, $left: null){
+
+	&:#{$pseudo}{
+		content: '';
+		position: absolute;
+		top: $top;
+		right: $right;
+		bottom: $bottom;
+		left: $left;
+	}
+}
+
+// custom font mixin
+@mixin fontface ($fontfamily, $filename, $weight: normal, $style: normal) {
+	font-family: $fontfamily;
+	src: url('fonts/#{$filename}.eot');
+	src: url('fonts/#{$filename}.eot?#iefix') format('embedded-opentype'),
+		 url('fonts/#{$filename}.woff') format('woff'),
+		 url('fonts/#{$filename}.woff') format('woff2'),
+		 url('fonts/#{$filename}.ttf') format('truetype'),
+		 url('fonts/#{$filename}.svg#{$filename}') format('svg');
+	font-weight: $weight;
+	font-style: $style;
+}
+
+@mixin placeholder {
+	&::-webkit-input-placeholder {@content}
+	&::-moz-placeholder {opacity: 1; @content}
+	&:-moz-placeholder {@content}
+	&:-ms-input-placeholder {@content}
+	&.placeholder {@content}
+}
+
+%colorBg{
+	background-color: $wpThemeColor;
+}
+
+%colorBdr{
+	border-color: $wpThemeColor;
+}
+
+%colorClr{
+	color: $wpThemeColor;
+}

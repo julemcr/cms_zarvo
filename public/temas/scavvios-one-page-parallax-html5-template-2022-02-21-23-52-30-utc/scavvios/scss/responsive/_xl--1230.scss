@@ -1,0 +1,68 @@
+@include media-breakpoint-up(xl){
+	h1, .h1{
+		font-size: (64/16) + rem;
+	}
+
+	h2, .h2{
+		font-size: (38/16) + rem;
+	}
+
+	h3, .h3{
+		font-size: (26/16) + rem;
+	}
+
+	.colXlDiv5{
+		max-width: 20% !important;
+		flex: 0 0 20% !important;
+	}
+
+	#pageHeader{
+		padding-top: 33px;
+		padding-bottom: 33px;
+	}
+
+	.ibSocialNetworks{
+		margin-left: 568px;
+	}
+
+	.abFeatureList{
+
+		li{
+
+			&:nth-child(1){
+				margin-left: 120px;
+			}
+
+			&:nth-child(2){
+				margin-left: 114px;
+			}
+
+			&:nth-child(4){
+				margin-left: 124px;
+			}
+		}
+	}
+
+	.filtersList{
+
+		> li{
+			margin-left: 33px;
+		}
+	}
+
+	.elStoryColumn{
+		padding-left: 86px;
+	}
+
+	.escHeading{
+		font-size: 22px;
+	}
+
+	.nwbcHeading{
+		font-size: 22px;
+	}
+
+	.btnTop{
+		margin-left: 567px;
+	}
+}

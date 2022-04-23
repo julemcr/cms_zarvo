@@ -1,0 +1,1237 @@
+html{
+	background-color: $secondary;
+}
+
+body{
+	-ms-overlfow-style: scrollbar;
+	min-width: 320px;
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6{
+
+	a{
+		color: inherit;
+	}
+}
+
+h3, .h3{
+	line-height: (36/26);
+}
+
+.form-control{
+	border-width: 0 0 1px;
+
+	&:focus,
+	&.filled{
+
+		+ .labelAbsolute{
+			transform: translateY(-50%);
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+Page Wrapper / #pageWrapper
+-------------------------------------------------------------------*/
+#pageWrapper{
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+}
+
+/*------------------------------------------------------------------
+Image Fit / .imgFit
+-------------------------------------------------------------------*/
+.imgFit{
+	object-fit: cover;
+}
+
+/*------------------------------------------------------------------
+Text Size Medium / .textSizeMedium
+-------------------------------------------------------------------*/
+.textSizeMedium{
+	font-size: 20px;
+	line-height: (30/20);
+}
+
+/*------------------------------------------------------------------
+Background (size) Cover / .bgCover
+-------------------------------------------------------------------*/
+.bgCover{
+	background-size: cover;
+	background-position: 50% 50%;
+}
+
+/*------------------------------------------------------------------
+Svg Mask Background / .svgBg
+-------------------------------------------------------------------*/
+.svgBg{
+	@extend .inaccessible;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: -1;
+	@include size(100%);
+}
+
+/*------------------------------------------------------------------
+Pointer Events None / .inaccessible
+-------------------------------------------------------------------*/
+.inaccessible{
+	pointer-events: none;
+}
+
+/*------------------------------------------------------------------
+Font Weight Medium / .fwMedium
+-------------------------------------------------------------------*/
+.fwMedium{
+	font-weight: 500;
+}
+
+.progress{
+	background-color: $gray-700;
+}
+
+/*------------------------------------------------------------------
+button Theme / .btnTheme
+-------------------------------------------------------------------*/
+.btnTheme{
+	color: $white;
+
+	&:hover{
+		background-color: $white;
+	}
+}
+
+/*------------------------------------------------------------------
+button Theme Outline / .btnThemeOutline
+-------------------------------------------------------------------*/
+.btnThemeOutline{
+	background-color: transparent;
+	
+	&:hover{
+		color: $white;
+	}
+}
+
+/*------------------------------------------------------------------
+button White / .btnWhite
+-------------------------------------------------------------------*/
+.btnWhite{
+	color: $gray-950;
+	background-color: $white;
+	border-color: $white;
+
+	&:hover{
+		background-color: $gray-950;
+		border-color: $white;
+		color: 	$white;
+	}
+}
+
+/*------------------------------------------------------------------
+button Width Small / .btnMinSmall
+-------------------------------------------------------------------*/
+.btnMinSmall{
+	min-width: 140px;
+}
+
+/*------------------------------------------------------------------
+Header fixer / .headerFixer
+-------------------------------------------------------------------*/
+.headerFixer{
+	transition: background-color 0.3s ease, box-shadow 0.3s ease;
+
+	&.fixedPosition{
+		background-color: $black;
+		box-shadow: 0 0 3px rgba($white, 0.2);
+	}
+}
+
+/*------------------------------------------------------------------
+Page Main Header / #pageHeader
+-------------------------------------------------------------------*/
+#pageHeader{
+	position: absolute;
+	z-index: 999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+/*------------------------------------------------------------------
+Page Logo / .logo
+-------------------------------------------------------------------*/
+.logo{
+	max-width: 105px;
+}
+
+/*------------------------------------------------------------------
+Page Main Navigation / .pgMainNavigation
+-------------------------------------------------------------------*/
+.pgMainNavigation{
+
+	.nav-item{
+
+		&.anchor-active{
+
+			.nav-link{
+				font-weight: $font-weight-bold;
+				background-color: $white;
+			}
+		}
+	}
+
+	.nav-link{
+		padding: 8px 15px;
+		position: relative;
+		transition: color 0.3s ease;
+	}
+}
+
+/*------------------------------------------------------------------
+Page Burger Menu Opener / .pgNavOpener
+-------------------------------------------------------------------*/
+.pgNavOpener{
+	transition: color 0.3s ease;
+	@include size(30px, 19px);
+	@include pseudo(before, 0, 0, null, 40%);
+	@include pseudo(after, null, 0, 0, 0);
+
+	&:hover{
+		color: $white;
+	}
+
+	&[aria-expanded="true"]{
+
+		&:after,
+		&:before,
+		.icnBar{
+			left: 0;
+		}
+	}
+
+	&:before,
+	&:after,
+	.icnBar{
+		background-color: currentColor;
+		height: 3px;
+		border-radius: 9px;
+		transition: $transition-base;
+	}
+
+	.icnBar{
+		left: 20%;
+		top: 8px;
+		right: 0;
+	}
+}
+
+/*------------------------------------------------------------------
+Page Navigation Collapse / .pageMainNavCollapse
+-------------------------------------------------------------------*/
+.pageMainNavCollapse{
+	background-color: $dark;
+	position: absolute;
+	left: 0;
+	top: calc(100% + 10px);
+	right: 0;
+	transform: scaleY(0);
+	transform-origin: 0 0 0;
+
+	&.show,
+	&.collapsing{
+		transform: scaleY(1);
+	}
+}
+
+.vAlign{
+	min-height: inherit;
+}
+
+/*------------------------------------------------------------------
+Heading Title / .headingTitle
+-------------------------------------------------------------------*/
+.headingTitle{
+	font-size: 18px;
+	padding-left: 60px;
+	@include pseudo(before, 0, null, 0, 0);
+
+	&:before{
+		background-image: linear-gradient(90deg, rgba($white,1) 0%, rgba($white,1) 100%), linear-gradient(90deg, rgba($white,1) 0%, rgba($white,1) 100%), radial-gradient(ellipse at center, rgba($warning,1) 0%, rgba($warning,1) 50%, rgba($warning,0) 50%, rgba($warning,0) 100%);
+		background-repeat: no-repeat;
+		background-size: 20px 2px, 7px 2px, 7px 7px;
+		background-position: 0 50%, 27px 50%, 43px 50%;
+		width: 51px;
+	}
+}
+
+.ibSlider{
+
+	&,
+	.slick-list,
+	.slick-track,
+	.slick-slide,
+	.slick-slide > div,
+	.slick-slide > div > div{
+		min-height: 100vh;
+	}
+}
+
+/*------------------------------------------------------------------
+Intro Block / .introBlock
+-------------------------------------------------------------------*/
+.introBlock{
+	min-height: 100vh;
+}
+
+/*------------------------------------------------------------------
+Intro Block Image / .ibImgHolder
+-------------------------------------------------------------------*/
+.ibImgHolder{
+	max-width: 290px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ibCaptionHolder{
+	z-index: 2;
+}
+
+/*------------------------------------------------------------------
+Intro Block Social Networks / .ibSocialNetworks
+-------------------------------------------------------------------*/
+.ibSocialNetworks{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	margin-top: 62px;
+	margin-left: 362px;
+
+	li{
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+
+	a{
+		transition: $btn-transition;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 16px;
+		color: $white;
+		border-radius: 100%;
+		border: 1px solid $white;
+		@include size(36px);
+
+		&:hover{
+			background-color: $warning;
+			border-color: $warning;
+			color: $white;
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+About Block Features Wrap / .abFeaturesWrap
+-------------------------------------------------------------------*/
+.abFeaturesWrap{
+	max-width: 326px;
+}
+
+/*------------------------------------------------------------------
+About Block Features List / .abFeatureList
+-------------------------------------------------------------------*/
+.abFeatureList{
+
+	li{
+		width: 50%;
+		margin-bottom: 40px;
+	}
+}
+
+/*------------------------------------------------------------------
+About Block Features Column / .abflColumn
+-------------------------------------------------------------------*/
+.abflColumn{
+	padding: 40px 15px 10px;
+	@include size(117px);
+}
+
+/*------------------------------------------------------------------
+About Block Features Tag / .abflcTag
+-------------------------------------------------------------------*/
+.abflcTag{
+	line-height: 1;
+	left: -5px;
+	top: -8px;
+	font-size: 14px;
+	@include size(44px);
+}
+
+/*------------------------------------------------------------------
+About Block Features Heading / .abflcHeading
+-------------------------------------------------------------------*/
+.abflcHeading{
+	font-size: 16px;
+	line-height: (26/18);
+}
+
+/*------------------------------------------------------------------
+Ms Icon / .mscIcnWrap
+-------------------------------------------------------------------*/
+.mscIcnWrap{
+	left: 30px;
+	top: 0;
+	margin-top: -35px;
+	@include size(70px);
+}
+
+.hasLineBottom{
+	@include pseudo(after, null, null, 0, 0);
+
+	&:after{
+		@include size(27px, 3px);
+	}
+}
+
+/*------------------------------------------------------------------
+Story Column / .msColumn
+-------------------------------------------------------------------*/
+.msColumn{
+	@include pseudo(before, 0, 0, 0, 0);
+
+	&:hover{
+
+		&:before{
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+
+	&:before{
+		@extend .inaccessible;
+		border-radius: $border-radius-lg;
+		border: 3px solid $gray-960;
+		opacity: 0;
+		visibility: hidden;
+		transition: $transition-fade;
+	}
+}
+
+/*------------------------------------------------------------------
+Progress Title / .prgTitle
+-------------------------------------------------------------------*/
+.prgTitle{
+	width: 150px;
+	margin-right: 10px;
+	font-size: 14px;
+	line-height: 1;
+}
+
+/*------------------------------------------------------------------
+Progress Show Span / .prgShowSpan
+-------------------------------------------------------------------*/
+.prgShowSpan{
+	font-size: 14px;
+	line-height: 1;
+	padding: 8px 3px;
+	min-width: 43px;
+	@include pseudo(before, 50%, 100%, null, null);
+
+	&.bg-orange{
+
+		&:before{
+			border-color: transparent $orange transparent transparent;
+		}
+	}
+
+	&.bg-primary{
+
+		&:before{
+			border-color: transparent $primary transparent transparent;
+		}
+	}
+
+	&.bg-secondary{
+
+		&:before{
+			border-color: transparent $secondary transparent transparent;
+		}
+	}
+
+	&.bg-warning{
+
+		&:before{
+			border-color: transparent $warning transparent transparent;
+		}
+	}
+
+	&.bg-dark{
+
+		&:before{
+			border-color: transparent $dark transparent transparent;
+		}
+	}
+
+	&.bg-light{
+
+		&:before{
+			border-color: transparent $light transparent transparent;
+		}
+	}
+
+	&.bg-pink{
+
+		&:before{
+			border-color: transparent $pink transparent transparent;
+		}
+	}
+
+	&:before{
+		transform: translateY(-50%);
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 4px 6px 4px 0;
+		border-color: transparent $info transparent transparent;
+		@include size(0);
+	}
+}
+
+/*------------------------------------------------------------------
+Progress Pie Chart List / .pieList
+-------------------------------------------------------------------*/
+.pieList{
+	margin-left: -30px;
+	margin-right: -30px;
+
+	> li{
+		padding-left: 30px;
+		padding-right: 30px;
+		margin-bottom: 30px;
+	}
+}
+
+.titleIn{
+	font-size: 26px;
+	line-height: 1;
+	@include size(100px);
+}
+
+.titleOut{
+	font-size: 14px;
+	line-height: 1;
+}
+
+/*------------------------------------------------------------------
+Filter List / .filtersList
+-------------------------------------------------------------------*/
+.filtersList{
+	margin-bottom: 9px;
+
+	> li{
+		margin-right: 16px;
+
+		&.active{
+
+			> a{
+
+				&:after{
+					transform: scaleX(1);
+				}
+			}
+		}
+
+		> a{
+			color: inherit;
+			transition: color 0.3s ease;
+			display: block;
+			position: relative;
+			padding-bottom: 9px;
+			@include pseudo(after, null, null, 0, 0);
+
+			&:after{
+				transition: transform 0.3s ease;
+				transform: scaleX(0);
+				transform-origin: 0 0 0;
+				@include size(15px, 3px);
+			}
+
+			&:hover{
+
+				&:after{
+					transform: scaleX(1);
+				}
+			}
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+mcwColumn / .mcwColumn
+-------------------------------------------------------------------*/
+.mcwColumn{
+
+	&:hover{
+
+		.mcwcCaption{
+			transform: scale(1);
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+mcwcCaption / .mcwcCaption
+-------------------------------------------------------------------*/
+.mcwcCaption{
+	z-index: 1;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	top: 10px;
+	transform: scale(0);
+	transition: transform 0.3s ease;
+	transform-origin: 50% 50% 0;
+	@include pseudo(before, 0, 0, 0, 0);
+
+	&:before{
+		opacity: 0.88;
+		z-index: -1;
+	}
+
+	.title{
+		font-size: 20px;
+		line-height: (28/24);
+	}
+
+	.subTitle{
+		font-size: 14px;
+		line-height: (20/16);
+	}
+}
+
+/*------------------------------------------------------------------
+stImgHolder / .stImgHolder
+-------------------------------------------------------------------*/
+.stImgHolder{
+	max-width: 268px;
+}
+
+/*------------------------------------------------------------------
+experienceList / .experienceList
+-------------------------------------------------------------------*/
+.experienceList{
+	background-image: linear-gradient(90deg, rgba($white,1) 0%, rgba($white,1) 100%), radial-gradient(ellipse at center, rgba($white,1) 0%, rgba($white,1) 50%, rgba($white,0) 50%, rgba($white,0) 100%), radial-gradient(ellipse at center, rgba($white,1) 0%, rgba($white,1) 50%, rgba($white,0) 50%, rgba($white,0) 100%);
+	background-repeat: no-repeat;
+	background-position: 3px 4px, 0 0, -1px 100%;
+	background-size: 2px calc(100% - 8px), 8px 9px, 10px 11px;
+
+	> li{
+		position: relative;
+		margin-bottom: 28px;
+
+		&:nth-child(odd){
+
+			.prTitle{
+				color: $warning;
+			}
+
+			.escIcnWrap{
+				background-color: $warning;
+			}
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+elStoryColumn / .elStoryColumn
+-------------------------------------------------------------------*/
+.elStoryColumn{
+	padding-left: 56px;
+}
+
+/*------------------------------------------------------------------
+escIcnWrap / .escIcnWrap
+-------------------------------------------------------------------*/
+.escIcnWrap{
+	z-index: 2;
+	left: 0;
+	top: 0;
+	margin-left: -25px;
+	@include size(60px);
+}
+
+.escHeading{
+	font-size: 19px;
+}
+
+.prTitle{
+	font-size: 16px;
+}
+
+/*------------------------------------------------------------------
+clientQuote / .clientQuote
+-------------------------------------------------------------------*/
+.clientQuote{
+	font-size: 20px;
+	line-height: (30/20);
+	@include pseudo(before, 44px, 0, null, null);
+
+	&:before{
+		content: "\e900";
+		font-size: 73px;
+
+		font-family: 'icomoon' !important;
+		speak: none;
+		font-style: normal;
+		font-weight: normal;
+		font-variant: normal;
+		text-transform: none;
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	q{
+		quotes: none;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(20px);
+		transition: opacity 0.7s ease, visibility 0.7s ease, transform 0.7s ease;
+
+		&:before,
+		&:after{
+			content: '';
+		}
+	}
+
+	cite{
+		font-style: normal;
+		font-size: 18px;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateX(20px);
+		transition: opacity 0.7s ease, visibility 0.7s ease, transform 0.7s ease;
+	}
+
+	.imgHolder{
+		transform: scale(0);
+		transform-origin: 50% 50% 0;
+		transition: transform 0.7s ease;
+		overflow: hidden;
+		@include size(110px);
+	}
+
+	.slick-current.slick-active &{
+
+		.imgHolder{
+			transform: scale(1);
+		}
+
+		q{
+			visibility: visible;
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		cite{
+			visibility: visible;
+			opacity: 1;
+			transform: translateX(0);
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+sponsorsList / .sponsorsList
+-------------------------------------------------------------------*/
+.sponsorsList{
+	margin-left: -15px;
+	margin-right: -15px;
+
+	> li{
+		margin-bottom: 15px;
+		padding-left: 15px;
+		padding-right: 15px;
+		width: 50%;
+	}
+
+	img{
+		filter: grayscale(100%);
+		opacity: 0.5;
+		transition: opacity 0.3s ease, filter 0.3s ease;
+
+		&:hover{
+			opacity: 1;
+			filter: grayscale(0%);
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+dotsList / .dotsList
+-------------------------------------------------------------------*/
+.dotsList{
+
+	li{
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+
+	button{
+		border-radius: 100%;
+		border: 0;
+		padding: 0;
+		text-indent: -9999px;
+		overflow: hidden;
+		position: relative;
+		background-color: $gray-450;
+		transition: $btn-transition;
+		@include size(11px);
+	}
+}
+
+/*------------------------------------------------------------------
+nwbColumn / .nwbColumn
+-------------------------------------------------------------------*/
+.nwbColumn{
+	height: 220px;
+
+	&.heightLg{
+		height: 410px;
+	}
+
+	&:hover{
+
+		.nwbcCaption{
+			
+			&:before{
+				opacity: 0.7;
+			}
+		}
+
+		.timeStamp{
+			color: $white;
+		}
+	}
+
+	.imgHolder{
+		left: 0;
+		top: 0;
+		filter: grayscale(100%);
+		@include pseudo(before, 0, 0, 0, 0);
+
+		&:before{
+			background-color: $dark;
+			opacity: 0.7;
+			z-index: 1;
+		}
+	}
+
+	.timeStamp{
+		transition: color 0.3s ease;
+	}
+}
+
+.nwbcHeading{
+	font-size: 18px;
+	line-height: (34/22);
+
+	a{
+		transition: color 0.3s ease;
+
+		&:hover{
+			color: $dark;
+		}
+	}
+}
+
+.nwbcCaption{
+	left: 0;
+	top: 0;
+	z-index: 1;
+	@include pseudo(before, 0, 0, 0, 0);
+
+	&.hasShadowBottom{
+		background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,1) 100%);
+	}
+
+	&:before{
+		opacity: 0;
+		z-index: -1;
+		transition: $transition-fade;
+	}
+}
+
+/*------------------------------------------------------------------
+pfbColumn / .pfbColumn
+-------------------------------------------------------------------*/
+.pfbColumn{
+	background-color: $gray-700;
+	transition: box-shadow 0.3s ease;
+
+	&:hover{
+		box-shadow: 0 0 0 2px rgba($light, 0.2);
+
+		.icn{
+
+			&:before{
+				animation-name: icnjuggle;
+			}
+		}
+	}
+
+	.title{
+		font-size: 14px;
+		line-height: (18/14);
+	}
+
+	.icn{
+		top: -20px;
+		left: 20px;
+		font-size: 25px;
+		@include size(50px);
+
+		&:before{
+			display: block;
+			animation-duration: 0.2s;
+			animation-iteration-count: 2;
+			animation-fill-mode: both;
+		}
+	}
+
+	a{
+		color: inherit;
+		transition: color 0.3s ease;
+
+		&:hover{
+			color: $warning;
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+labelAbsolute / .labelAbsolute
+-------------------------------------------------------------------*/
+.labelAbsolute{
+	@extend .inaccessible;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	padding: $input-padding-y $input-padding-x;
+	transition: transform 0.3s ease;
+}
+
+.textareaInput{
+
+	&,
+	&.form-control{
+		resize: none;
+		height: $input-height;
+	}
+}
+
+/*------------------------------------------------------------------
+textCopyright / .textCopyright
+-------------------------------------------------------------------*/
+.textCopyright{
+	color: $gray-650;
+	font-size: 14px;
+	line-height: (24/14);
+
+	a{
+		color: inherit;
+		transition: color 0.3s ease;
+
+		&:hover{
+			color: $white;
+		}
+	}
+}
+
+/*------------------------------------------------------------------
+footer nav list / .ftNav
+-------------------------------------------------------------------*/
+.ftNav{
+
+	li{
+		margin-right: 8px;
+		margin-left: 8px;
+		margin-bottom: 10px;
+	}
+
+	a{
+		color: $white;
+		transition: color 0.3s ease;
+	}
+}
+
+/*------------------------------------------------------------------
+Button back to top / .btnTop
+-------------------------------------------------------------------*/
+.btnTop{
+	font-size: 16px;
+	left: 50%;
+	transform: translateX(-50%);
+	top: 0;
+	margin-left: 0;
+	transition: $btn-transition;
+	margin-top: -20px;
+	margin-left: 330px;
+	@include size(36px);
+}
+
+.vline{
+	left: 50%;
+	top: 0;
+	bottom: 0;
+	background-color: $gray-960;
+	width: 1px;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 4;
+	@include pseudo(before, 0, null, null, 50%);
+
+	&:before{
+		box-shadow: 0 0 3px rgba($white, 0.8);
+		margin-left: -1px;
+		opacity: 0;
+		visibility: hidden;
+		animation-name: vlinecont;
+		animation-duration: 7s;
+		animation-fill-mode: both;
+		animation-iteration-count: infinite;
+		animation-delay: 2s;
+		animation-timing-function: ease;
+		@include size(2px, 70px);
+	}
+}
+
+.edot{
+	@include size(11px);
+	@include pseudo(before, 0, 0, 0, 0);
+
+	&.edotsizelg{
+		@include size(21px);
+	}
+
+	&.edotsizesm{
+		@include size(7px);
+	}
+
+	&:before{
+		box-shadow: 0 0 10px rgba($white, 0.6);
+		background-color: rgba($white, 0.3);
+		border-radius: inherit;
+		animation-name: edotcont;
+		animation-iteration-count: infinite;
+		animation-fill-mode: both;
+		animation-duration: 2s;
+		animation-timing-function: ease-out;
+	}
+}
+
+.vline1{
+	margin-left: -586px;
+	animation-name: vline1anim;
+}
+
+.vline2{
+	margin-left: -214px;
+	animation-name: vline2anim;
+
+	&:before{
+		animation-delay: 4s;
+	}
+}
+
+.vline3{
+	margin-left: 181px;
+	animation-name: vline3anim;
+
+	&:before{
+		animation-delay: 6s;
+	}
+}
+
+.vline4{
+	margin-left: 584px;
+	animation-name: vline4anim;
+
+	&:before{
+		animation-delay: 8s;
+	}
+}
+
+.edot1,
+.edot2,
+.edot3,
+.edot4,
+.edot5,
+.edot6,
+.edot7{
+	left: 50%;
+	top: 50%;
+	z-index: 2;
+}
+
+.edot1{
+	margin: 214px 0 0 -4px;
+}
+
+.edot2{
+	margin: -149px 0 0 69px;
+
+	&:before{
+		animation-delay: 0.3s;
+	}
+}
+
+.edot3{
+	margin: 222px 0 0 348px;
+
+	&:before{
+		animation-delay: 0.5s;
+	}
+}
+
+.edot4{
+	margin: -113px 0 0 693px;
+
+	&:before{
+		animation-delay: 0.7s;
+	}
+}
+
+.edot5{
+	margin: -67px 0 0 -212px;
+
+	&:before{
+		animation-delay: 0.8s;
+	}
+}
+
+.edot6{
+	margin: -41px 0 0 43px;
+
+	&:before{
+		animation-delay: 0.9s;
+	}
+}
+
+.edot7{
+	margin: 157px 0 0 -44px;
+
+	&:before{
+		animation-delay: 0.95s;
+	}
+}
+
+.prgCapWrap{
+
+	&:not(.animated){
+
+		.progress-bar{
+			width: 0 !important;
+		}
+	}
+}
+
+.progress-bar{
+	transition: width 0.7s ease-out;
+}
+
+.ftAreaWrap{
+	z-index: 2;
+	background-color: $body-bg;
+}
+
+.cr1,
+.cr2{
+	animation-fill-mode: both;
+	animation-duration: 0.5s;
+	animation-iteration-count: 5;
+	transform-origin: 50% 50% 0;
+}
+
+.animated{
+
+	.cr1{
+		animation-name: cr1anim;
+	}
+
+	.cr2{
+		animation-name: cr2anim;
+	}
+}
+
+.loader-holder{
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 99999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba($white, 0.9);
+	@include size(100%);
+}
+
+.lds-ellipsis {
+	display: inline-block;
+	position: relative;
+	width: 80px;
+	height: 80px;
+}
+.lds-ellipsis div {
+	position: absolute;
+	top: 33px;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background-color: $dark;
+	animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.lds-ellipsis div:nth-child(1) {
+	left: 8px;
+	animation: lds-ellipsis1 1.6s infinite;
+}
+.lds-ellipsis div:nth-child(2) {
+	left: 8px;
+	animation: lds-ellipsis2 1.6s infinite;
+}
+.lds-ellipsis div:nth-child(3) {
+	left: 32px;
+	animation: lds-ellipsis2 1.6s infinite;
+}
+.lds-ellipsis div:nth-child(4) {
+	left: 56px;
+	animation: lds-ellipsis3 1.6s infinite;
+}
+.messageForm{
+	.error{
+		margin: 0 0 20px;
+		color: $white;
+		background: #ff3333;
+		padding: 15px 20px 13px;
+	}
+	.success{
+		margin: 0 0 20px;
+		color: $white;
+		background: #698cf0;
+	}
+	.has-error .form-control{
+		color: red;
+		border-color: red;
+	}
+}

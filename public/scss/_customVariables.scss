@@ -1,0 +1,298 @@
+// Color system
+$white:    #fff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #cfcfcf;
+$gray-450: #c0c0c0;
+$gray-500: #adb5bd !default;
+$gray-600: #6c6c6d;
+$gray-650: #808080;
+$gray-700: #19232b;
+$gray-800: #0f161c;
+$gray-900: #040913;
+$gray-950: #111;
+$gray-960: #293844;
+$black:    #000 !default;
+
+$grays: ();
+$grays: map-merge(
+	(
+		"100": $gray-100,
+		"200": $gray-200,
+		"300": $gray-300,
+		"400": $gray-400,
+		"450": $gray-450,
+		"500": $gray-500,
+		"600": $gray-600,
+		"650": $gray-650,
+		"700": $gray-700,
+		"800": $gray-800,
+		"900": $gray-900,
+		"950": $gray-950,
+		"960": $gray-960
+	),
+	$grays
+);
+
+$blue:    #007bff !default;
+$indigo:  #d593ff;
+$purple:  #6f42c1 !default;
+$pink:    #ff26be;
+$red:     #dc3545 !default;
+$orange:  #ff761b;
+$yellow:  #ffc514;
+$green:   #20ce65;
+$teal:    #20c997 !default;
+$cyan:    #30d3ff;
+
+$colors: ();
+$colors: map-merge(
+	(
+		"blue":       $blue,
+		"indigo":     $indigo,
+		"purple":     $purple,
+		"pink":       $pink,
+		"red":        $red,
+		"orange":     $orange,
+		"yellow":     $yellow,
+		"green":      $green,
+		"teal":       $teal,
+		"cyan":       $cyan,
+		"white":      $white,
+		"gray":       $gray-600,
+		"gray-dark":  $gray-800
+	),
+	$colors
+);
+
+$primary:       $green;
+$secondary:     $gray-800;
+$success:       $green;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red !default;
+$light:         $gray-100 !default;
+$dark:          $gray-900;
+
+$theme-colors: ();
+$theme-colors: map-merge(
+	(
+		"primary":    $primary,
+		"secondary":  $secondary,
+		"success":    $success,
+		"info":       $info,
+		"warning":    $warning,
+		"danger":     $danger,
+		"light":      $light,
+		"dark":       $dark,
+		"orange":     $orange,
+		"pink":       $pink,
+		"indigo":     $indigo
+	),
+	$theme-colors
+);
+
+$wpThemeColor: $green;
+
+// Options
+$enable-caret:	false;
+$enable-validation-icons:	false;
+$enable-deprecation-messages:	false;
+
+// Spacing
+$spacer: 5px;
+$spacers: ();
+$spacers: map-merge(
+	(
+		0: 0,
+		1: $spacer,
+		2: ($spacer * 2),
+		3: ($spacer * 3.2),
+		4: ($spacer * 4),
+		5: ($spacer * 5),
+		6: ($spacer * 6),
+		7: ($spacer * 7),
+		8: ($spacer * 8),
+		9: ($spacer * 9),
+		10: ($spacer * 10),
+		11: ($spacer * 11),
+		12: ($spacer * 12),
+		13: ($spacer * 13),
+		14: ($spacer * 14),
+		15: ($spacer * 15),
+		16: ($spacer * 16),
+		17: ($spacer * 17),
+		18: ($spacer * 18),
+		19: ($spacer * 19),
+		20: ($spacer * 20),
+		21: ($spacer * 21),
+		22: ($spacer * 22),
+		23: ($spacer * 23),
+		24: ($spacer * 24),
+		25: ($spacer * 25),
+		26: ($spacer * 26),
+		27: ($spacer * 27),
+		28: ($spacer * 28),
+		29: ($spacer * 29),
+		30: ($spacer * 30),
+		31: ($spacer * 31),
+		32: ($spacer * 32),
+		33: ($spacer * 33),
+		34: ($spacer * 34),
+		35: ($spacer * 35),
+		36: ($spacer * 36),
+		37: ($spacer * 37),
+		38: ($spacer * 38),
+		39: ($spacer * 39),
+		40: ($spacer * 40),
+		41: ($spacer * 41),
+		42: ($spacer * 42),
+		43: ($spacer * 43),
+		44: ($spacer * 44),
+		45: ($spacer * 45),
+		46: ($spacer * 46),
+		47: ($spacer * 47),
+		48: ($spacer * 48),
+		49: ($spacer * 49),
+		50: ($spacer * 50),
+		51: ($spacer * 51),
+		52: ($spacer * 52),
+		53: ($spacer * 53),
+		54: ($spacer * 54),
+		55: ($spacer * 55),
+		56: ($spacer * 56),
+		57: ($spacer * 57),
+		58: ($spacer * 58),
+		59: ($spacer * 59),
+		60: ($spacer * 60)
+	),
+	$spacers
+);
+$sizes: ();
+$sizes: map-merge(
+	(
+		20: 20%,
+		25: 25%,
+		33: 33.333%,
+		50: 50%,
+		66: 66.667%,
+		80: 80%,
+		100: 100%,
+		auto: auto
+	),
+	$sizes
+);
+
+// Body
+$body-bg:	$gray-700;
+$body-color:	$gray-400;
+
+// Links
+$link-color:	theme-color("warning");
+$link-decoration:	none !default;
+$link-hover-color:	darken($link-color, 15%);
+$link-hover-decoration:	none;
+
+// Grid breakpoints
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	lgwd: 1025px,
+	xl: 1230px,
+	xlwd: 1366px,
+	xxl: 1920px
+);
+
+// Grid containers
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1200px
+);
+
+// Components
+$border-color:	$gray-600;
+$border-radius:	3px;
+$border-radius-lg:	5px;
+$border-radius-sm:	1px;
+$component-active-bg:	theme-color("warning");
+$transition-base:	all .3s ease;
+$transition-fade:	opacity .3s ease, visibility .3s ease;
+$transition-collapse:	height .3s ease, transform .3s ease;
+
+// Typography
+$font-family-sans-serif:	"Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+$font-family-base:	$font-family-sans-serif;
+$font-weight-base:	$font-weight-light;
+$line-height-base:	(28/16);
+$h1-font-size:	(37);
+$h2-font-size:	(30);
+$h3-font-size:	(19);
+$h4-font-size:	(24);
+$h5-font-size:	(22);
+$h6-font-size:	(14);
+$headings-margin-bottom:	$spacer * 3;
+$headings-font-weight:	$font-weight-bold;
+$headings-color:	$white;
+$hr-border-color:	$border-color;
+
+// Buttons + Forms
+$input-btn-padding-y:	0.8125rem;
+$input-btn-padding-x:	0.9375rem;
+$input-btn-focus-width:	0;
+$input-btn-focus-color:	rgba($component-active-bg, .0);
+$input-btn-focus-box-shadow:	0 0 0 $input-btn-focus-width $input-btn-focus-color;
+
+// Buttons
+$btn-padding-y:	$input-btn-padding-y;
+$btn-padding-x:	$input-btn-padding-x;
+$btn-border-width:	$input-btn-border-width;
+$btn-font-weight:	500;
+$btn-box-shadow:	none;
+$btn-focus-width:	$input-btn-focus-width;
+$btn-focus-box-shadow:	$input-btn-focus-box-shadow;
+$btn-active-box-shadow:	none;
+$btn-border-radius:	$border-radius;
+$btn-border-radius-lg:	$border-radius-lg;
+$btn-border-radius-sm:	$border-radius-sm;
+$btn-transition:	color .3s ease, background-color .3s ease, border-color .3s ease;
+
+// Forms
+$input-padding-y:	0.6875rem;
+$input-padding-x:	0;
+$input-bg:	transparent;
+$input-color:	$white;
+$input-border-color:	$white;
+$input-box-shadow:	none;
+$input-border-radius:	0;
+$input-border-radius-lg:	$input-border-radius;
+$input-border-radius-sm:	$input-border-radius;
+$input-focus-bg:	$input-bg;
+$input-focus-border-color:	$input-border-color;
+$input-focus-color:	$input-color;
+$input-focus-width:	$input-btn-focus-width;
+$input-focus-box-shadow:	$input-btn-focus-box-shadow;
+$input-placeholder-color:	$gray-400;
+$input-height:	53px;
+$form-group-margin-bottom:	2rem;
+
+// Navbar
+$navbar-toggler-padding-y:	0.1875rem;
+$navbar-toggler-padding-x:	0.3125rem;
+$navbar-toggler-font-size:	$font-size-lg;
+$navbar-toggler-border-radius:	$btn-border-radius;
+$navbar-dark-color:	$white;
+$navbar-dark-hover-color:	$white;
+$navbar-dark-active-color:	$white;
+$navbar-dark-toggler-icon-bg:	url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'><path stroke='#{$navbar-dark-color}' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/></svg>");
+$navbar-dark-toggler-border-color:	$white;
+
+$progress-height:	0.375rem;
+$progress-bg:	$primary;
+$progress-border-radius:	0;
+$progress-box-shadow:	none;
+$progress-bar-bg:	theme-color("info");

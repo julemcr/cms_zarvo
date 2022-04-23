@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<configuration date="2022/04/22" author="e.World Technology Ltd.">
+  <project id="{5ACD2586-5733-4EB1-9592-B819B3395C82}" file="D:\Clientes\Jannet Cursos Virtuales\Web\Sistemas\cmsweb.pmp" name="cmsweb" product="PHPMaker" version="15.0" datetime="2022/04/22 02:02:55" languagefolder="phplang" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0">
+    <table id="audittrail" name="audittrail" caption="Auditorial del sistema" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
+    <table id="ciudades" name="ciudades" caption="Registro de ciudades" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
+    <table id="configuracion" name="configuracion" caption="Configuración del sistema(N)" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
+    <table id="page_portafolio" name="page_portafolio" caption="Registro de portafolio" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
+    <table id="page_service" name="page_service" caption="Registro de servicios" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
+    <table id="paises" name="paises" caption="Registro de paises" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
+    <table id="person" name="person" caption="Registro de persona" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
+    <table id="portafolio_categoria" name="portafolio_categoria" caption="Registro de categoria de protafolio" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
+    <table id="profiles" name="profiles" caption="Biografia" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
+    <table id="setting_cms" name="setting_cms" caption="Ajustes de CMS" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
+    <table id="sexo" name="sexo" caption="Registro de sexo" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
+    <table id="slidercm" name="slidercm" caption="Registro de Slider" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
+    <table id="terms_conditions" name="terms_conditions" caption="Registro de términos y condiciones" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
+    <table id="userlevelpermissions" name="userlevelpermissions" caption="Registro de nivel de usuario" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
+    <table id="userlevels" name="userlevels" caption="Registro de Rol" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
+    <table id="setting_sistem" name="setting_sistem.php" caption="Ajustes del sistema" userlevel="-2,&quot;Anonymous&quot;,0;0,&quot;Default&quot;,0" priv="1" />
+  </project>
+</configuration>
